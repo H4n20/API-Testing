@@ -91,7 +91,6 @@ def delete_request(user_id):
 
 
 get_request()
-post_request()
 user_id = post_request()
 put_request(user_id)
 delete_request(user_id)
