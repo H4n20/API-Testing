@@ -31,7 +31,7 @@ def post():
     print(response.status_code)
     assert response.status_code == 201
 
-def test_get_auth():
+def test_get_auth(error_headers):
     url = base_url + "/public/v2/users"
     headers = error_headers
     response = requests.get(url, headers=headers)
@@ -39,7 +39,7 @@ def test_get_auth():
     assert response.status_code == 200
 
 
-def test_post_auth():
+def test_post_auth(error_headers):
     url = base_url + "/public/v2/users"
     headers = error_headers
     new_user = file_handle.read_file("data_value\\new_user.json")
@@ -52,7 +52,7 @@ def test_post_auth():
     assert response.status_code == 201
 
 
-def test_put_auth():
+def test_put_auth(error_headers):
     global user_id
     global user_id1
     global user_id2
@@ -73,7 +73,7 @@ def test_put_auth():
     assert response.status_code == 200
 
 
-def test_delete_auth():
+def test_delete_auth(error_headers):
     global user_id
     global user_id1
     global user_id2
