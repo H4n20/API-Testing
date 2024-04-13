@@ -14,7 +14,7 @@ base_url = "https://gorest.co.in"
 @pytest.fixture(params=[
     file_handle.read_file("data_value\\c_p_r.json"),# post param thừa trường "country"
     file_handle.read_file("data_value\\c_p_m.json"),# post param thiếu trường "name"
-    file_handle.read_file("data_value\\c_p_w.json") # post param sai trường "email" -> "telephone"
+    file_handle.read_file("data_value\\c_p_w.json") # post param sai trường "name" -> "name1"
 ])
 
 def param_error1(request):
